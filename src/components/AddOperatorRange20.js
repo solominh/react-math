@@ -12,8 +12,11 @@ class AddOperatorRange20 extends Component {
     return (
       <div>
 
-        <Stats {...this.props.stats} />
-        <div className="screen">
+
+        <div className="stats-box">
+          <Stats {...this.props.stats} />
+        </div>
+        <div className="screen-box">
           <Screen {...this.props} />
         </div>
         <Keypad />

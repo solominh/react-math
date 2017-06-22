@@ -26,7 +26,7 @@ class Keypad extends Component {
 
   render() {
     return (
-      <div>
+      <div className="keypad">
         <div className="row">
           <div className="btn-key btn-numberkey" onClick={() => this.onNumberKeyClick(7)}>
             7
@@ -65,10 +65,10 @@ class Keypad extends Component {
             0
           </div>
           <div className="btn-key btn-clear" onClick={this.onAllClearKeyClick}>
-            clear
+            AC
           </div>
           <div className="btn-key btn-done" onClick={this.onDoneKeyClick}>
-            done
+            &#10004;
           </div>
         </div>
 

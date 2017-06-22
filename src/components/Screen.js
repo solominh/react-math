@@ -7,7 +7,7 @@ export default class Screen extends Component {
     const { currentAnswer } = this.props
 
     return (
-      <div>
+      <div className="screen">
         {firstNumber}{" + "}{secondNumber}{" = "}{currentAnswer}
       </div>
     )

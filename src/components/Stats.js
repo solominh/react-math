@@ -4,12 +4,14 @@ export default class Stats extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          Right {this.props.right}
+      <div className="stats">
+        <div className="right-box">
+          <span className="right-symbol">&#10004;</span>
+          {this.props.right}
         </div>
-        <div>
-          Wrong {this.props.wrong}
+        <div className="wrong-box">
+          <span className="wrong-symbol">&#10008;</span>
+          {this.props.wrong}
         </div>
       </div>
     )
