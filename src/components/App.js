@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AddOperatorRange20 from './components/AddOperatorRange20'
+import AddOperatorRange20 from './AddOperatorRange20'
 
 class App extends Component {
   render() {
