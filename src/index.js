@@ -7,6 +7,12 @@ import ReactModal from 'react-modal'
 import App from './App';
 import reducers from './reducers';
 
+// DB
+import {
+  loadState,
+  saveState,
+} from './db/localStorage'
+
 // CSS
 import './index.css';
 
@@ -35,7 +41,11 @@ const enhancer = composeWithDevTools(
 )
 
 // Store
-const store = createStore(reducers, enhancer)
+const store = createStore(reducers, loadState(), enhancer)
+
+store.subscribe(() => {
+  saveState(store.getState())
+})
 
 // react-modal
 ReactModal.setAppElement('#root')
