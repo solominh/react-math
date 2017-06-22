@@ -13,7 +13,7 @@ const Root = ({ store, history }) => {
     <Provider store={store}>
       { /* ConnectedRouter will use the store from Provider automatically */}
       <ConnectedRouter history={history}>
-        <App />
+        <Route path='/' exact component={App} />
       </ConnectedRouter>
     </Provider>
   )
