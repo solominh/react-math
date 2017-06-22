@@ -40,7 +40,7 @@ export default function (state = initialState, action) {
             right: right + 1,
             wrong: wrong,
           },
-          puzzle: addOperatorRange20PuzzleGenerator(),
+          puzzle: addOperatorRange20PuzzleGenerator(puzzle.firstNumber,puzzle.secondNumber),
           currentAnswer: "",
         }
       }
@@ -71,9 +71,23 @@ function getRandomInt(min, max) {
 }
 
 
-function addOperatorRange20PuzzleGenerator() {
-  let firstNumber = getRandomInt(1, 9)
-  let secondNumber = getRandomInt(11 - firstNumber, 9)
+function addOperatorRange20PuzzleGenerator(prevFirstNumber = 7, prevSecondNumber = 9) {
+  
+  // Total
+  let prevTotal = prevFirstNumber + prevSecondNumber
+  let total = prevTotal;
+  while (total === prevTotal) {
+    total = getRandomInt(11, 18)
+  }
+
+
+  let firstNumber;
+  let secondNumber;
+  do {
+    firstNumber = getRandomInt(1, 9)
+    secondNumber = total - firstNumber
+  } while (secondNumber >= 10)
+
   return {
     firstNumber,
     secondNumber,
