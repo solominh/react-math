@@ -7,22 +7,27 @@ import {
   onDoneKeyClick,
 } from '../actions'
 
-
+import {playTouchSound} from '../sound/SoundManager'
 
 class Keypad extends Component {
 
 
   onNumberKeyClick = (number) => {
+    playTouchSound()
     this.props.onNumberKeyClick(number)
   }
 
   onAllClearKeyClick = () => {
+    playTouchSound()
     this.props.onAllClearKeyClick()
   }
 
   onDoneKeyClick = () => {
+    playTouchSound()
     this.props.onDoneKeyClick()
   }
+
+  
 
   render() {
     return (

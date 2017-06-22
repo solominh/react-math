@@ -1,6 +1,27 @@
 import React, { Component } from 'react'
 
+import {
+  playRightAnswerSound,
+  playWrongAnswerSound,
+} from '../sound/SoundManager'
+
 export default class Stats extends Component {
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps === this.props) return;
+
+    const { right, wrong } = this.props
+    const { right: nextWright, wrong: nextWrong } = nextProps
+    if (nextWright > right) {
+      playRightAnswerSound()
+      return;
+    }
+
+    if (nextWrong > wrong) {
+      playWrongAnswerSound()
+      return;
+    }
+  }
 
   render() {
     return (
