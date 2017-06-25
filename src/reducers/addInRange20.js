@@ -6,11 +6,11 @@ const getInitialState = () => {
       right: 0,
       wrong: 0,
     },
-    puzzle: addOperatorRange20PuzzleGenerator(),
+    puzzle: addInRange20PuzzleGenerator(),
     currentAnswer: "",
   }
 }
-const initialState = localStorage.getItem('addOperatorRange20') || getInitialState()
+const initialState = localStorage.getItem('addInRange20') || getInitialState()
 
 
 export default function (state = initialState, action) {
@@ -40,7 +40,7 @@ export default function (state = initialState, action) {
             right: right + 1,
             wrong: wrong,
           },
-          puzzle: addOperatorRange20PuzzleGenerator(puzzle.firstNumber,puzzle.secondNumber),
+          puzzle: addInRange20PuzzleGenerator(puzzle.firstNumber,puzzle.secondNumber),
           currentAnswer: "",
         }
       }
@@ -63,15 +63,14 @@ export default function (state = initialState, action) {
 }
 
 /**
- * Returns a random integer between min (inclusive) and max (inclusive)
+ * Returns a random integer between min (inclusive) and max (exclusive)
  * Using Math.round() will give you a non-uniform distribution!
  */
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-function addOperatorRange20PuzzleGenerator(prevFirstNumber = 7, prevSecondNumber = 9) {
+function addInRange20PuzzleGenerator(prevFirstNumber = 7, prevSecondNumber = 9) {
   
   // Total
   let prevTotal = prevFirstNumber + prevSecondNumber

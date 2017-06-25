@@ -8,7 +8,7 @@ import Screen from './Screen'
 
 
 
-class AddOperatorRange20 extends Component {
+class AddInRange20 extends Component {
 
   render() {
     return (
@@ -32,4 +32,4 @@ function mapStateToProps({ reducer }) {
   return reducer
 }
 
-export default connect(mapStateToProps)(AddOperatorRange20)
+export default connect(mapStateToProps)(AddInRange20)
