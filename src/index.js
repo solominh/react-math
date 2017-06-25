@@ -17,14 +17,9 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 
-// React-router-redux
-import createHistory from 'history/createBrowserHistory'
-import { routerMiddleware } from 'react-router-redux'
-const history = createHistory()
-const routerMiddlewareInstance = routerMiddleware(history)
 
 // Middlewares
-const middlewares = [routerMiddlewareInstance, thunk];
+const middlewares = [thunk];
 
 // redux-devtools extension
 const enhancer = composeWithDevTools(
@@ -41,7 +36,7 @@ ReactModal.setAppElement('#root')
 registerServiceWorker();
 
 ReactDOM.render(
-  <Root store={store} history={history} />,
+  <Root store={store} />,
   document.getElementById('root')
 );
 

@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux';
 
-import { Route } from 'react-router-dom'
-import { ConnectedRouter } from 'react-router-redux'
+import { Route ,BrowserRouter as Router} from 'react-router-dom'
 
 import App from './App'
 
 
 
-const Root = ({ store, history }) => {
+const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      { /* ConnectedRouter will use the store from Provider automatically */}
-      <ConnectedRouter history={history}>
+      <Router>
         <Route path='/' exact component={App} />
-      </ConnectedRouter>
+      </Router>
     </Provider>
   )
 }
