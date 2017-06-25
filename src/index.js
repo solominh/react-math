@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 import ReactModal from 'react-modal'
 
 
-import Root from './components/Root'
+import Root from './store/Root'
 import configureStore from './configureStore'
 
 
