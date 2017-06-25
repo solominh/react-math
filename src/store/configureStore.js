@@ -1,12 +1,12 @@
 
-import reducers from './reducers';
+import reducers from '../reducers';
 import { createStore } from 'redux';
 
 // DB
 import {
   loadState,
   saveState,
-} from './db/localStorage'
+} from '../db/localStorage'
 
 
 const configureStore = (enhancer) => {
