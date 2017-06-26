@@ -4,13 +4,17 @@ import { Provider } from 'react-redux';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 import AddInRange20App from '../containers/AddInRange20App'
+import SubtractInRange20App from '../containers/SubtractInRange20App'
 
 
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path='/' exact component={AddInRange20App} />
+        <div>
+          <Route path='/' exact component={AddInRange20App} />
+          <Route path='/subtractinrange20' exact component={SubtractInRange20App} />
+        </div>
       </Router>
     </Provider>
   )

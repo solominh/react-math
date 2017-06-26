@@ -1,5 +1,5 @@
 import * as types from '../actions/ActionTypes'
-import addInRange20PuzzleGenerator from '../utils/addInRange20PuzzleGenerator'
+import subtractInRange20PuzzleGenerator from '../utils/subtractInRange20PuzzleGenerator'
 
 
 const getInitialState = () => {
@@ -8,7 +8,7 @@ const getInitialState = () => {
       right: 0,
       wrong: 0,
     },
-    puzzle: addInRange20PuzzleGenerator({}),
+    puzzle: subtractInRange20PuzzleGenerator({}),
     currentAnswer: "",
   }
 }
@@ -33,14 +33,14 @@ export default function (state = getInitialState(), action) {
     case types.ON_DONE_KEY_CLICK: {
       const { right, wrong } = state.stats
       const { puzzle, currentAnswer } = state
-      const isRight = (puzzle.firstNumber + puzzle.secondNumber) === Number(currentAnswer) ? 1 : 0
+      const isRight = (puzzle.firstNumber - puzzle.secondNumber) === Number(currentAnswer) ? 1 : 0
       if (isRight) {
         return {
           stats: {
             right: right + 1,
             wrong: wrong,
           },
-          puzzle: addInRange20PuzzleGenerator(puzzle),
+          puzzle: subtractInRange20PuzzleGenerator(puzzle),
           currentAnswer: "",
         }
       }
