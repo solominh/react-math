@@ -10,10 +10,10 @@ import {
 
 
 const configureStore = (enhancer) => {
-  const store = createStore(reducers, loadState(), enhancer)
+  const store = createStore(reducers, loadState('App'), enhancer)
 
   store.subscribe(() => {
-    saveState(store.getState())
+    saveState(store.getState('App'))
   })
 
   return store

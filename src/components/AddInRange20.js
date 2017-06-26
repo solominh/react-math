@@ -13,8 +13,6 @@ class AddInRange20 extends Component {
   render() {
     return (
       <div>
-
-
         <div className="stats-box">
           <Stats {...this.props.stats} />
         </div>
@@ -28,8 +26,8 @@ class AddInRange20 extends Component {
 
 }
 
-function mapStateToProps({ reducer }) {
-  return reducer
+function mapStateToProps(state) {
+  return state;
 }
 
 export default connect(mapStateToProps)(AddInRange20)

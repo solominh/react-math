@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux';
 
-import { Route ,BrowserRouter as Router} from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 
-import App from '../components/App'
-
+import AddInRange20App from '../containers/AddInRange20App'
 
 
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path='/' exact component={App} />
+        <Route path='/' exact component={AddInRange20App} />
       </Router>
     </Provider>
   )
