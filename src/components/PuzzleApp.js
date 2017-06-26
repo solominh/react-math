@@ -8,7 +8,7 @@ import Screen from './Screen'
 
 
 
-class AddInRange20 extends Component {
+class PuzzleApp extends Component {
 
   render() {
     return (
@@ -17,7 +17,7 @@ class AddInRange20 extends Component {
           <Stats {...this.props.stats} />
         </div>
         <div className="screen-box">
-          <Screen {...this.props} operator={'+'} />
+          <Screen {...this.props}/>
         </div>
         <Keypad />
       </div>
@@ -30,4 +30,4 @@ function mapStateToProps(state) {
   return state;
 }
 
-export default connect(mapStateToProps)(AddInRange20)
+export default connect(mapStateToProps)(PuzzleApp)

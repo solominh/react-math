@@ -29,5 +29,6 @@ export default function addInRange20PuzzleGenerator({ prevFirstNumber = 7, prevS
   return {
     firstNumber,
     secondNumber,
+    operator: '+',
   }
 }

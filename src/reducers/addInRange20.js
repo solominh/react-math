@@ -14,6 +14,7 @@ const getInitialState = () => {
 }
 
 export default function (state = getInitialState(), action) {
+  console.log(state)
 
   switch (action.type) {
     case types.ON_NUMBER_KEY_CLICK: {
