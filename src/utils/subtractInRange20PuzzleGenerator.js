@@ -26,5 +26,8 @@ export default function subtractInRange20PuzzleGenerator({ prevFirstNumber = 15,
     firstNumber,
     secondNumber,
     operator: '-',
+    checkPuzzle(remaining){
+      return remaining === (this.firstNumber - this.secondNumber);
+    }
   }
 }

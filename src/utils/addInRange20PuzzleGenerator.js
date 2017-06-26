@@ -30,5 +30,8 @@ export default function addInRange20PuzzleGenerator({ prevFirstNumber = 7, prevS
     firstNumber,
     secondNumber,
     operator: '+',
+    checkPuzzle(total) {
+      return total === (this.firstNumber + this.secondNumber);
+    }
   }
 }
