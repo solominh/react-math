@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import Keypad from './Keypad'
 import Stats from './Stats'
-import SubtractInRange20Screen from './SubtractInRange20Screen'
+import Screen from './Screen'
 
 
 
@@ -17,7 +17,7 @@ class SubtractInRange20 extends Component {
           <Stats {...this.props.stats} />
         </div>
         <div className="screen-box">
-          <SubtractInRange20Screen {...this.props} />
+          <Screen {...this.props} operator={'-'}/>
         </div>
         <Keypad />
       </div>

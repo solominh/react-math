@@ -4,11 +4,13 @@ export default class AddInRange20Screen extends Component {
 
   render() {
     const { firstNumber, secondNumber } = this.props.puzzle
-    const { currentAnswer } = this.props
+    const { currentAnswer, operator } = this.props
+
+    const text = `${firstNumber} ${operator} ${secondNumber} = ${currentAnswer}`
 
     return (
       <div className="screen">
-        {firstNumber}{" + "}{secondNumber}{" = "}{currentAnswer}
+        {text}
       </div>
     )
   }

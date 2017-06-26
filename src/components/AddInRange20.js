@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import Keypad from './Keypad'
 import Stats from './Stats'
-import AddInRange20Screen from './AddInRange20Screen'
+import Screen from './Screen'
 
 
 
@@ -17,7 +17,7 @@ class AddInRange20 extends Component {
           <Stats {...this.props.stats} />
         </div>
         <div className="screen-box">
-          <AddInRange20Screen {...this.props} />
+          <Screen {...this.props} operator={'+'} />
         </div>
         <Keypad />
       </div>
