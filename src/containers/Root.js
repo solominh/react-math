@@ -16,6 +16,7 @@ const Root = ({ store }) => {
           <Route path='/' exact component={AddInRange20App} />
           <Route path='/subtract20' exact component={SubtractInRange20App} />
           <Route path='/multiply1' exact component={Multiply1DigitApp} />
+          <Route path='/' render={() => <div>Page not found</div>} />
         </div>
       </Router>
     </Provider>
