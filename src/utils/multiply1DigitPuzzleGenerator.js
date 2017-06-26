@@ -24,9 +24,13 @@ export default function multiply1DigitPuzzleGenerator({ prevFirstNumber = 7, pre
   return {
     firstNumber,
     secondNumber,
-    operator: '*',
+    operator: 'x',
     checkPuzzle(product) {
       return product === (this.firstNumber * this.secondNumber);
     }
   }
+}
+
+export const checkPuzzle = ({ firstNumber, secondNumber, answer }) => {
+  return answer === (firstNumber * secondNumber)
 }

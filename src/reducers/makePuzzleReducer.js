@@ -1,6 +1,6 @@
 import * as types from '../actions/ActionTypes'
 
- const makePuzzleReducer = (puzzleGenerator) => {
+const makePuzzleReducer = (puzzleGenerator, checkPuzzle) => {
 
   const getInitialState = () => {
     return {
@@ -33,7 +33,8 @@ import * as types from '../actions/ActionTypes'
       case types.ON_DONE_KEY_CLICK: {
         const { right, wrong } = state.stats
         const { puzzle, currentAnswer } = state
-        const isRight = puzzle.checkPuzzle(Number(currentAnswer)) ? 1 : 0
+        const { firstNumber, secondNumber } = puzzle
+        const isRight = checkPuzzle({ firstNumber, secondNumber, answer: Number(currentAnswer) }) ? 1 : 0
         if (isRight) {
           return {
             stats: {

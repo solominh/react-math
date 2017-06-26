@@ -18,13 +18,12 @@ export default function addInRange20PuzzleGenerator({ prevFirstNumber = 7, prevS
     total = getRandomInt(11, 18)
   }
 
-
   let firstNumber;
-  let secondNumber;
   do {
     firstNumber = getRandomInt(1, 9)
-    secondNumber = total - firstNumber
-  } while (secondNumber >= 10)
+  } while (total - firstNumber >= 10)
+
+  let secondNumber = total - firstNumber;
 
   return {
     firstNumber,
@@ -34,4 +33,8 @@ export default function addInRange20PuzzleGenerator({ prevFirstNumber = 7, prevS
       return sum === (this.firstNumber + this.secondNumber);
     }
   }
+}
+
+export const checkPuzzle = ({ firstNumber, secondNumber, answer }) => {
+  return answer === (firstNumber + secondNumber)
 }
