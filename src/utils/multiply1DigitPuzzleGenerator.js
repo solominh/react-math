@@ -9,25 +9,24 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default function subtractInRange20PuzzleGenerator({ prevFirstNumber = 15, prevSecondNumber = 8 }) {
+export default function multiply1DigitPuzzleGenerator({ prevFirstNumber = 7, prevSecondNumber = 9 }) {
 
   let firstNumber;
   do {
-    firstNumber = getRandomInt(11, 18)
+    firstNumber = getRandomInt(1, 9)
   } while (firstNumber === prevFirstNumber)
-
 
   let secondNumber;
   do {
     secondNumber = getRandomInt(1, 9)
-  } while (firstNumber - secondNumber >= 10)
+  } while (secondNumber === prevSecondNumber)
 
   return {
     firstNumber,
     secondNumber,
-    operator: '-',
-    checkPuzzle(difference){
-      return difference === (this.firstNumber - this.secondNumber);
+    operator: '*',
+    checkPuzzle(product) {
+      return product === (this.firstNumber * this.secondNumber);
     }
   }
 }

@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 import AddInRange20App from '../containers/AddInRange20App'
 import SubtractInRange20App from '../containers/SubtractInRange20App'
+import Multiply1DigitApp from '../containers/Multiply1DigitApp'
 
 
 const Root = ({ store }) => {
@@ -13,7 +14,8 @@ const Root = ({ store }) => {
       <Router>
         <div>
           <Route path='/' exact component={AddInRange20App} />
-          <Route path='/subtractinrange20' exact component={SubtractInRange20App} />
+          <Route path='/subtract20' exact component={SubtractInRange20App} />
+          <Route path='/multiply1' exact component={Multiply1DigitApp} />
         </div>
       </Router>
     </Provider>
