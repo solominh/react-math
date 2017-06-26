@@ -12,13 +12,14 @@ import {
 const middlewares = [thunk];
 const enhancer = applyMiddleware(...middlewares)
 
+const KEY = 'ADD_IN_RANGE_20'
 
 
 const configureStore = (enhancer) => {
-  const store = createStore(addInRange20, loadState('ADD_IN_RANGE_20'), enhancer)
+  const store = createStore(addInRange20, loadState(KEY), enhancer)
 
   store.subscribe(() => {
-    saveState(store.getState('ADD_IN_RANGE_20'))
+    saveState(KEY, store.getState())
   })
 
   return store

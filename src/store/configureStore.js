@@ -8,12 +8,13 @@ import {
   saveState,
 } from '../db/localStorage'
 
+const KEY = 'APP'
 
 const configureStore = (enhancer) => {
-  const store = createStore(reducers, loadState('App'), enhancer)
+  const store = createStore(reducers, loadState(KEY), enhancer)
 
   store.subscribe(() => {
-    saveState(store.getState('App'))
+    saveState(KEY, store.getState())
   })
 
   return store
