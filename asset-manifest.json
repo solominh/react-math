@@ -1,6 +1,9 @@
 {
   "main.css": "static/css/main.718e6411.css",
   "main.css.map": "static/css/main.718e6411.css.map",
-  "main.js": "static/js/main.207960da.js",
-  "main.js.map": "static/js/main.207960da.js.map"
+  "main.js": "static/js/main.5e4ba9a4.js",
+  "main.js.map": "static/js/main.5e4ba9a4.js.map",
+  "static\\media\\beep.aac": "static/media/beep.8df01a0b.aac",
+  "static\\media\\ding.aac": "static/media/ding.ad941b97.aac",
+  "static\\media\\touch.wav": "static/media/touch.01051a43.wav"
 }
