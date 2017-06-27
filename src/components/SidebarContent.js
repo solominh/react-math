@@ -15,6 +15,9 @@ const styles = {
     color: '#757575',
     textDecoration: 'none',
   },
+  sidebarLinkSelected:{
+    color:'black',
+  },
   divider: {
     margin: '8px 0',
     height: 1,
@@ -26,17 +29,18 @@ const styles = {
 };
 
 const SidebarContent = (props) => {
+  const {sidebarLink,sidebarLinkSelected} =styles
   const style = props.style ? { ...styles.sidebar, ...props.style } : styles.sidebar;
 
   return (
     <MaterialTitlePanel title="Menu" style={style}>
       <div style={styles.content}>
       
-        <NavLink to="/" style={styles.sidebarLink}>Home</NavLink>
+        <NavLink to="/" exact activeStyle={sidebarLinkSelected} style={sidebarLink}>Home</NavLink>
         <div style={styles.divider} />
-        <NavLink to="/" style={styles.sidebarLink}>Add in range 20</NavLink>
-        <NavLink to="/subtract20" style={styles.sidebarLink}>Subtract in range 20</NavLink>
-        <NavLink to="/multiply1" style={styles.sidebarLink}>Multiply 1 digit</NavLink>
+        <NavLink to="/add20" exact activeStyle={sidebarLinkSelected} style={sidebarLink}>Add in range 20</NavLink>
+        <NavLink to="/subtract20" exact activeStyle={sidebarLinkSelected} style={sidebarLink}>Subtract in range 20</NavLink>
+        <NavLink to="/multiply1" exact activeStyle={sidebarLinkSelected} style={sidebarLink}>Multiply 1 digit</NavLink>
       </div>
     </MaterialTitlePanel>
   );
