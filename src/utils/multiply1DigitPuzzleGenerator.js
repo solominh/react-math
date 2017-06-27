@@ -9,7 +9,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default function multiply1DigitPuzzleGenerator({ prevFirstNumber = 7, prevSecondNumber = 9 }) {
+export default function multiply1DigitPuzzleGenerator({ fisrtNumber: prevFirstNumber = 7, secondNumber: prevSecondNumber = 9 }) {
 
   let firstNumber;
   do {

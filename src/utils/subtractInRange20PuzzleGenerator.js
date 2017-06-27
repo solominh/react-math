@@ -9,8 +9,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default function subtractInRange20PuzzleGenerator({ prevFirstNumber = 15, prevSecondNumber = 8 }) {
-
+export default function subtractInRange20PuzzleGenerator({ firstNumber: prevFirstNumber = 15, secondNumber: prevSecondNumber = 8 }) {
   let firstNumber;
   do {
     firstNumber = getRandomInt(11, 18)
