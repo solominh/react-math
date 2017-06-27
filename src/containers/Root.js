@@ -10,7 +10,7 @@ import Multiply1DigitApp from '../containers/Multiply1DigitApp'
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={'react-math'}>
         <div>
           <Route path='/' exact component={AddInRange20App} />
           <Route path='/add20' exact component={AddInRange20App} />
