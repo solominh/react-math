@@ -2,7 +2,6 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: sans-serif;
-    max-width: 300px;
     font-size:1.5em;
 }
 
@@ -53,6 +52,10 @@ body {
     background: #9CCC65;
 }
 
+.puzzle-app{
+  max-width: 300px;
+}
+
 .screen-box {
     height: 100px;
     background: #FFCDD2;
@@ -97,4 +100,15 @@ body {
 
 .wrong-box {
     margin-left: 2em;
+}
+
+
+.toolbar{
+  display: flex;
+  display:-webkit-flex;
+  align-items: center;
+}
+
+.toolbar-title{
+  margin-left: 16px;
 }

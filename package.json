@@ -9,6 +9,7 @@
     "react-modal": "^2.0.6",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
+    "react-sidebar": "^2.3.2",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0"
   },

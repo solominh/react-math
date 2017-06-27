@@ -12,7 +12,7 @@ class PuzzleApp extends Component {
 
   render() {
     return (
-      <div>
+      <div className="puzzle-app">
         <div className="stats-box">
           <Stats {...this.props.stats} />
         </div>

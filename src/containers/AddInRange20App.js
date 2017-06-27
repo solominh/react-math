@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import PuzzleApp from '../components/PuzzleApp'
 import addInRange20Store from '../store/addInRange20Store'
+import App from '../components/App'
 
 class AddInRange20App extends Component {
 
@@ -10,7 +10,7 @@ class AddInRange20App extends Component {
   render() {
     return (
       <Provider store={this.store}>
-        <PuzzleApp />
+        <App />
       </Provider>
     )
   }
