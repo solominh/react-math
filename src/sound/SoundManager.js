@@ -1,6 +1,6 @@
-import touch from '../raw/touch.wav'
-import ding from '../raw/ding.aac'
-import beep from '../raw/beep.aac'
+import touch from '../assets/media/touch.wav'
+import ding from '../assets/media/ding.aac'
+import beep from '../assets/media/beep.aac'
 
 export function playTouchSound() {
   let sound = new Audio(touch)
