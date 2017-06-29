@@ -54,6 +54,7 @@ body {
 
 .puzzle-app{
   max-width: 300px;
+  margin:auto;
 }
 
 .screen-box {
