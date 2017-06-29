@@ -113,3 +113,7 @@ body {
 .toolbar-title{
   margin-left: 16px;
 }
+
+.iconMenu button [data-react-toolbox="font-icon"]{
+  color: #ffffff !important;
+}
