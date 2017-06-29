@@ -8,6 +8,12 @@ import ReactModal from 'react-modal'
 import Root from './containers/Root'
 import configureStore from './store/configureStore'
 
+// react-toolbox
+import './toolbox/theme.css'
+import theme from './toolbox/theme'
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+
+
 
 // CSS
 import './index.css';
@@ -36,7 +42,9 @@ ReactModal.setAppElement('#root')
 registerServiceWorker();
 
 ReactDOM.render(
-  <Root store={store} />,
+  <ThemeProvider theme={theme}>
+    <Root store={store} />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
