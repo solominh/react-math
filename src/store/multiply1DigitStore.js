@@ -15,7 +15,7 @@ const enhancer = applyMiddleware(...middlewares)
 const KEY = 'MULTIPLY_1_DIGIT'
 
 
-const configureStore = (enhancer) => {
+const configureStore = () => {
   const store = createStore(multiply1Digit, loadState(KEY), enhancer)
 
   store.subscribe(() => {

@@ -15,7 +15,7 @@ const enhancer = applyMiddleware(...middlewares)
 const KEY = 'SUBTRACT_IN_RANGE_20'
 
 
-const configureStore = (enhancer) => {
+const configureStore = () => {
   const store = createStore(subtractInRange20, loadState(KEY), enhancer)
 
   store.subscribe(() => {

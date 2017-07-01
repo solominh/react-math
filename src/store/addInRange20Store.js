@@ -15,8 +15,9 @@ const enhancer = applyMiddleware(...middlewares)
 const KEY = 'ADD_IN_RANGE_20'
 
 
-const configureStore = (enhancer) => {
+const configureStore = () => {
   const store = createStore(addInRange20, loadState(KEY), enhancer)
+  console.log(store.dispatch)
 
   store.subscribe(() => {
     saveState(KEY, store.getState())

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux';
 
-import { Route, BrowserRouter as Router} from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 import AddInRange20App from '../containers/AddInRange20App'
 import SubtractInRange20App from '../containers/SubtractInRange20App'
